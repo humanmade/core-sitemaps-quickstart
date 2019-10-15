@@ -1,0 +1,3 @@
+@local:
+  ssh: vagrant:default
+  path: /vagrant/wp

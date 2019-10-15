@@ -1,0 +1,26 @@
+<?php
+/**
+ * This is the local dev configuration file for Chassis.
+ *
+ * This file should be symlinked into place as part of the setup.
+ */
+
+// Disable automatic updates.
+define( 'AUTOMATIC_UPDATER_DISABLED', true );
+
+// Disable the file editors.
+define( 'DISALLOW_FILE_EDIT', true );
+
+// Enable all the debugging.
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_DISPLAY', true );
+
+// Fake HTTP Host for WP-CLI compatibility.
+if ( ! isset( $_SERVER['HTTP_HOST'] ) ) {
+	$_SERVER['HTTP_HOST'] = 'sitemaps.local';
+}
+
+// HTTPS host name handling.
+define( 'WP_SITEURL', 'https://sitemaps.local/wp' );
+define( 'WP_HOME', 'https://sitemaps.local' );

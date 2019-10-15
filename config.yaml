@@ -1,0 +1,48 @@
+# Chassis Configuration
+
+# Domain names to use for Vagrant
+#
+# The first name will be used as the machine's name, subsequent names will be
+# aliased in your hosts file and in nginx.
+# Domain names must use the `.local` TLD.
+hosts:
+  - sitemaps.local
+
+# Should we use multisite?
+multisite: No
+
+# Set database values to save the prefix so Chassis doesn't freak out on
+# re-provisions after tests.
+database:
+  name: wordpress
+  user: wordpress
+  password: password
+  prefix: wp_
+
+# Site Configuration
+# (When overriding, include all values)
+site:
+  name: Google XML Sitemaps
+
+# Install a list of extensions automatically
+extensions:
+  - chassis/composer
+  - chassis/mailhog
+  - chassis/memcache
+  - chassis/nodejs
+  - chassis/sequelpro
+  - chassis/xdebug
+  - chassis/chassis_openssl
+
+disabled_extensions:
+  - chassis/tester
+
+php: 7.2
+
+virtualbox:
+  memory: 2048
+
+admin:
+  user: wordpress
+  email: wordpress@sitemaps.local
+  password: password
