@@ -48,9 +48,10 @@ Install the development environment:
 1. Clone Chassis into a directory on your machine:
 	 - `git clone --recursive https://github.com/Chassis/Chassis.git core-sitemaps`
 	 - `cd core-sitemaps`
-1. Clone this repository into a `content` directory:
-	 
+1. Clone this quickstart repository into a `content` directory:
 	 - `git clone --recursive https://github.com/humanmade/core-sitemaps-quickstart/ content`
+1. Clone the plugin repository inside the plugins directory:
+     - `git clone https://github.com/humanmade/core-sitemaps content/plugins/core-sitemaps`
 1. Set up the Chassis VM:
 	 - `vagrant up --provision`  
 	 This will take a while to run. Go and put the kettle on, but don't forget to come back and complete the next steps.
