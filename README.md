@@ -9,7 +9,6 @@ This repository is developed by [Human Made](https://humanmade.com/), powered by
 * [Onboarding](#onboarding)
 * [Local Development Environment](#local-development-environment)
 * [Development Process](#development-process)
-* [Deployment](#deployment)
 * [Running the Tests](#running-the-tests)
 
 ---
@@ -59,51 +58,20 @@ Install the development environment:
 	 - Unix: `ln -s content/local-config.php.dist local-config.php`
 	 - Windows: `mklink local-config.php content/local-config.php.dist`
 1. When the machine has finished provisioning, install the development dependencies:
-	 
 	 - `cd content && composer install`
 	 
 	 
 
-Your environment can then be accessed at [https://sitemaps.local](https://sitemaps.local). You'll likely see an SSL certificate error message because the environment uses a self-signed certificate. See below for instructions for adding the certificate to your trust store in order to avoid this warning.
+Your environment can then be accessed at [sitemaps.local](http://sitemaps.local). 
 
-Log in to [the admin area](https://rsdms.local/wp/wp-admin/) with the username `wordpress` and password `password`.
-
-## Trusting the Chassis Security Certificate
-
-In order to avoid security errors and get that nice green padlock in your browser's location bar, you should add the site's security certificate to your trust store. The certificate can be found at `/sitemaps.local.cert` (one level above `content`).
-
-### Firefox on all operating systems:
-
-* Open Firefox's Preferences.
-* Go to Advanced -> Certificates -> View certificates -> Authorities.
-* Import the certificate.
-* Click "Trust this CA to identify web sites".
-
-### Other browsers on macOS:
-
-* Open the "Keychain Access" app.
-* Drag the certificate into the "System" keychain.
-* Right-click it and click "Get Info".
-* Expand the "Trust" section if it's not already.
-* In the "Secure Sockets Layer (SSL)" list, select "Always Trust".
-* Close the window. At this point you may have to enter your macOS account password.
-* Restart your browser for this to take effect.
-
-### Other browsers on Windows:
-
-This is a slightly more involved process. [See this third-party guide for step by step instructions](https://www.thewindowsclub.com/manage-trusted-root-certificates-windows).
+Log in to [the admin area](http://sitemaps.local/wp/wp-admin/) with the username `wordpress` and password `password`.
 
 # Development Process
 
 Before you begin committing code, [double check that you have the correct email address configured for this particular Git repo](https://help.github.com/articles/setting-your-email-in-git/#setting-your-email-address-for-a-single-repository). It's likely that this should be your **work** email address instead of a **personal** email address.
 
-The development process mostly follows the [Git Flow](http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/) model. 
-
-`To be decided`
-
-# Deployment
-
-`to be decided`
+See the [Contributing document](https://github.com/humanmade/core-sitemaps/blob/master/docs/CONTRIBUTING.md) for our 
+branching strategy.
 
 # Running the Tests
 

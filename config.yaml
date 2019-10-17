@@ -27,13 +27,14 @@ site:
 # Install a list of extensions automatically
 extensions:
   - chassis/composer
-  - chassis/mailhog
   - chassis/memcache
   - chassis/nodejs
   - chassis/sequelpro
   - chassis/xdebug
-  - chassis/chassis_openssl
+  - chassis/xhprof
+  - chassis/xhprofgui
 
+# Use composer for test suite
 disabled_extensions:
   - chassis/tester
 
