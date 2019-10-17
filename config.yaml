@@ -26,19 +26,20 @@ site:
 
 # Install a list of extensions automatically
 extensions:
+  - chassis/chassis_xhgui
   - chassis/composer
   - chassis/memcache
   - chassis/nodejs
   - chassis/sequelpro
   - chassis/xdebug
-  - chassis/xhprof
-  - chassis/xhprofgui
 
-# Use composer for test suite
+# Testier - Use composer for test suite
+# OpenSSL - Conflicts with XHgui
 disabled_extensions:
   - chassis/tester
+  - chassis/chassis_openssl
 
-php: 7.2
+php: 7.3
 
 virtualbox:
   memory: 2048

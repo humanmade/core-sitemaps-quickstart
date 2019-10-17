@@ -19,72 +19,14 @@
 			"url": "https://wpackagist.org"
 		}
 	],
-	"scripts": {
-		"post-install-cmd": [
-			"@setup"
-		],
-		"post-update-cmd": [
-			"@setup"
-		],
-		"setup": [
-			"@composer run-script --list"
-		],
-		"ci-tests": [
-			"@test:phpunit",
-			"@test:behat-ci"
-		],
-		"local-tests": [
-			"@test:phpunit-local",
-			"@test:behat-local"
-		],
-		"test:phpunit": [
-			"vendor/bin/phpunit --verbose --colors=always"
-		],
-		"test:phpunit-local": [
-			"wp @local db query --dbuser=root --dbpass=password \"CREATE DATABASE IF NOT EXISTS wordpress_test DEFAULT CHARSET utf8\"",
-			"vagrant ssh -c \"cd /vagrant/content && WP_TESTS_DB_PASS=password composer run test:phpunit\""
-		],
-		"test:phpcs": [
-			"vendor/bin/phpcs -nps --colors --report-code --report-summary --report-width=80 ."
-		],
-		"test:behat-ci": [
-			"vendor/bin/behat --colors --format progress"
-		],
-		"test:behat-local": [
-			"# Make sure Selenium is running!",
-			"BEHAT_PARAMS='{\"extensions\":{\"Behat\\\\MinkExtension\":{\"base_url\":\"https://sitemaps.local\"},\"PaulGibbs\\\\WordpressBehatExtension\":{\"site_url\":\"https://sitemaps.local/wp\",\"wpcli\":{\"alias\":\"local\"}}}}' vendor/bin/behat --colors --format progress --"
-		],
-	  "test:behat-steps": [
-		"BEHAT_PARAMS='{\"extensions\":{\"Behat\\\\MinkExtension\":{\"base_url\":\"https://sitemaps.local\"},\"PaulGibbs\\\\WordpressBehatExtension\":{\"site_url\":\"https://sitemaps.local/wp\",\"wpcli\":{\"alias\":\"local\"}}}}' vendor/bin/behat --colors --definitions i"
-	  ]
-	},
-	"scripts-descriptions": {
-		"setup": "Sets up the development environment.",
-		"ci-tests": "Runs all tests (PHPUnit and Behat) -- for CI environments.",
-		"local-tests": "Runs all tests (PHPUnit and Behat) -- for local environments.",
-		"test:phpunit": "Run PHPUnit tests.",
-		"test:phpunit-local": "Run PHPUnit tests -- for local environments.",
-		"test:phpcs": "Runs the PHP code sniffer.",
-		"test:behat-ci": "Run Behat tests -- for CI environments.",
-		"test:behat-local": "Run Behat tests -- for local environments.",
-		"test:behat-steps": "View step definitions for Behat tests -- for local environments."
-	},
 	"require": {
-		"php": "~7.2",
+		"php": "~7.3",
 		"oomphinc/composer-installers-extender": "^1.1"
 	},
 	"require-dev": {
-		"behat/mink-goutte-driver": "^1.2",
-		"behat/mink-selenium2-driver": "^1.3",
-		"genesis/behat-fail-aid": "^2.0",
-		"humanmade/coding-standards": "^0.3",
-		"opis/json-schema": "^1.0",
-		"paulgibbs/behat-wordpress-extension": "~3.0",
-		"phpunit/phpunit": "~7.0",
 		"roots/wordpress": "5.2.2",
 		"wp-cli/wp-cli": "2.2.0",
 		"wp-cli/wp-cli-bundle": "^2.1",
-		"wp-phpunit/wp-phpunit": "5.1.1",
 		"wpackagist-plugin/query-monitor": "*",
 		"wpackagist-plugin/user-switching": "*"
 	},
@@ -109,8 +51,5 @@
 			]
 		},
 		"wordpress-install-dir": "tests/app/www"
-	},
-	"autoload-dev": {
-		"psr-4": { "HM\\Tests\\Behat\\": "features/bootstrap/" }
 	}
 }
