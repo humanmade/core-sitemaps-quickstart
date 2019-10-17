@@ -22,7 +22,7 @@ database:
 # Site Configuration
 # (When overriding, include all values)
 site:
-  name: Google XML Sitemaps
+  name: Core Sitemaps
 
 # Install a list of extensions automatically
 extensions:
