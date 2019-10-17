@@ -22,5 +22,5 @@ if ( ! isset( $_SERVER['HTTP_HOST'] ) ) {
 }
 
 // HTTPS host name handling.
-define( 'WP_SITEURL', 'https://sitemaps.local/wp' );
-define( 'WP_HOME', 'https://sitemaps.local' );
+define( 'WP_SITEURL', 'http://sitemaps.local/wp' );
+define( 'WP_HOME', 'http://sitemaps.local' );
