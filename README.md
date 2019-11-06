@@ -58,7 +58,7 @@ Install the development environment:
 	 - Unix: `ln -s content/local-config.php.dist local-config.php`
 	 - Windows: `mklink local-config.php content/local-config.php.dist`
 1. When the machine has finished provisioning, install the development dependencies:
-	 - `cd content && composer install`
+	 - `cd content/plugins/core-sitemaps && composer install`
 	 
 	 
 
