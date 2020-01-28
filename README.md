@@ -68,31 +68,3 @@ Before you begin committing code, [double check that you have the correct email 
 
 See the [Contributing document](https://github.com/humanmade/core-sitemaps/blob/master/docs/CONTRIBUTING.md) for our 
 branching strategy.
-
-# Running the Tests
-
-The project contains three types of automated tests:
-
-* **Coding standards** which are run via [PHP Code Sniffer (PHPCS)](https://github.com/squizlabs/PHP_CodeSniffer).
-* **Unit tests** which are run via [PHPUnit](https://phpunit.de/) and the WordPress unit testing framework.
-
-All of the test frameworks are installed with Composer as part of the development environment setup. All of the tests are run via Composer scripts which are defined in `composer.json`.
-
-## Running the Entire Test Suite
-
-To run the entire test suite in one go:
-
-* `composer run local-tests`
-
-## Running the Unit Tests
-
-To run just the unit tests, run:
-
-* `composer run test:phpunit-local`
-
-## Running the Functional Tests
-
-To run just the functional tests, run:
-
-* `composer run test:behat-local`
-
