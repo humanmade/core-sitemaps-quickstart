@@ -38,10 +38,6 @@ Ensure you have the prerequisite software installed:
 * [Vagrant](https://www.vagrantup.com/downloads.html) 1.9+
 * [Composer](https://getcomposer.org/) 1.8+
 
-In order to run the automated testing suite, you'll also need:
-
-* [Selenium Standalone](https://www.npmjs.com/package/selenium-standalone) (which requires the [Java Platform JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)).
-
 Install the development environment:
 
 1. Clone Chassis into a directory on your machine:
@@ -68,7 +64,7 @@ Log in to [the admin area](http://sitemaps.local/wp/wp-admin/) with the username
 
 # Development Process
 
-Before you begin committing code, [double check that you have the correct email address configured for this particular Git repo](https://help.github.com/articles/setting-your-email-in-git/#setting-your-email-address-for-a-single-repository). It's likely that this should be your **work** email address instead of a **personal** email address.
+Before you begin committing code, [double check that you have the correct email address configured for this particular Git repo](https://help.github.com/articles/setting-your-email-in-git/#setting-your-email-address-for-a-single-repository). 
 
 See the [Contributing document](https://github.com/humanmade/core-sitemaps/blob/master/docs/CONTRIBUTING.md) for our 
 branching strategy.
@@ -79,15 +75,10 @@ The project contains three types of automated tests:
 
 * **Coding standards** which are run via [PHP Code Sniffer (PHPCS)](https://github.com/squizlabs/PHP_CodeSniffer).
 * **Unit tests** which are run via [PHPUnit](https://phpunit.de/) and the WordPress unit testing framework.
-* **Functional tests** which are run via [Behat](http://behat.org/en/latest/) and the [WordHat](https://wordhat.info/) integration layer.
 
 All of the test frameworks are installed with Composer as part of the development environment setup. All of the tests are run via Composer scripts which are defined in `composer.json`.
 
 ## Running the Entire Test Suite
-
-The functional tests, by default, require the Google Chrome browser, and [Selenium Standalone](https://www.npmjs.com/package/selenium-standalone). If you use the linked package to install Selenium, to start it, in a seperate terminal, enter: 
-
-`selenium-standalone install && selenium-standalone start`
 
 To run the entire test suite in one go:
 
