@@ -1,6 +1,6 @@
 # Core Sitemaps Quickstart
 
-This is the developer setup repository for the Google XML Sitemap project.
+This is the developer setup repository for the [Google XML Sitemap project](https://github.com/GoogleChromeLabs/wp-sitemaps/).
 
 This repository is developed by [Human Made](https://humanmade.com/), powered by [WordPress](https://wordpress.org), and [Chassis](https://beta.chassis.io).
 
