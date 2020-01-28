@@ -41,12 +41,12 @@ Ensure you have the prerequisite software installed:
 Install the development environment:
 
 1. Clone Chassis into a directory on your machine:
-	 - `git clone --recursive https://github.com/Chassis/Chassis.git core-sitemaps`
-	 - `cd core-sitemaps`
+	 - `git clone --recursive https://github.com/Chassis/Chassis.git sitemaps.local`
+	 - `cd sitemaps.local`
 1. Clone this quickstart repository into a `content` directory:
 	 - `git clone --recursive https://github.com/humanmade/core-sitemaps-quickstart/ content`
 1. Clone the plugin repository inside the plugins directory:
-     - `git clone https://github.com/humanmade/core-sitemaps content/plugins/core-sitemaps`
+     - `git clone https://github.com/GoogleChromeLabs/wp-sitemaps content/plugins/wp-sitemaps`
 1. Set up the Chassis VM:
 	 - `vagrant up --provision`  
 	 This will take a while to run. Go and put the kettle on, but don't forget to come back and complete the next steps.
@@ -54,13 +54,13 @@ Install the development environment:
 	 - Unix: `ln -s content/local-config.php.dist local-config.php`
 	 - Windows: `mklink local-config.php content/local-config.php.dist`
 1. When the machine has finished provisioning, install the development dependencies:
-	 - `cd content/plugins/core-sitemaps && composer install`
+	 - `cd content/plugins/wp-sitemaps && composer install`
 	 
 	 
 
 Your environment can then be accessed at [sitemaps.local](http://sitemaps.local). 
 
-Log in to [the admin area](http://sitemaps.local/wp/wp-admin/) with the username `wordpress` and password `password`.
+Log in to [the admin area](http://sitemaps.local/wp/wp-admin/) with the username `wordpress` and password `password` and enable the plugin.
 
 # Development Process
 
